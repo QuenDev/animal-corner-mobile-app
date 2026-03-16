@@ -1,8 +1,4 @@
-
-// ignore_for_file: type=lint
-import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
-import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,8 +36,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAZSKEdw0n52mHffa32cx3igFUW3A1O0XI',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_WEB'] ?? '',
     appId: '1:179423395003:web:f0421078594e6f7e963d9e',
     messagingSenderId: '179423395003',
     projectId: 'pet-application-final',
@@ -50,16 +46,16 @@ class DefaultFirebaseOptions {
     measurementId: 'G-LHNTXM9PJ7',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDTUY09bt4keo_Uc6H3c6A_1i7t7qI-Dvg',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_ANDROID'] ?? '',
     appId: '1:179423395003:android:e50e4a563512306d963d9e',
     messagingSenderId: '179423395003',
     projectId: 'pet-application-final',
     storageBucket: 'pet-application-final.appspot.com',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBafcZpmtVKIT5ryZDkqm7uSNROmDDueQ4',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_IOS'] ?? '',
     appId: '1:179423395003:ios:65b5e542cafe5ddf963d9e',
     messagingSenderId: '179423395003',
     projectId: 'pet-application-final',
@@ -68,8 +64,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.adminPanel',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBafcZpmtVKIT5ryZDkqm7uSNROmDDueQ4',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_IOS'] ?? '',
     appId: '1:179423395003:ios:65b5e542cafe5ddf963d9e',
     messagingSenderId: '179423395003',
     projectId: 'pet-application-final',
@@ -78,8 +74,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.adminPanel',
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAZSKEdw0n52mHffa32cx3igFUW3A1O0XI',
+  static FirebaseOptions windows = FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY_WINDOWS'] ?? '',
     appId: '1:179423395003:web:10123e229771e625963d9e',
     messagingSenderId: '179423395003',
     projectId: 'pet-application-final',
@@ -87,4 +83,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'pet-application-final.appspot.com',
     measurementId: 'G-047LV0FF23',
   );
+}
 }
