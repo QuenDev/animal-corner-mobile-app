@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "179423395003",
+    "firebase_url": "https://pet-application-final-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pet-application-final",
+    "storage_bucket": "pet-application-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179423395003:android:b824ef83d7714b0c963d9e",
+        "android_client_info": {
+          "package_name": "com.acvsc.animalcorner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179423395003-0muekqvalqq8udmg2dlmam8j35acp88c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acvsc.animalcorner",
+            "certificate_hash": "63d04cf26caf67f43c532a0bb74303a384315bfb"
+          }
+        },
+        {
+          "client_id": "179423395003-q0b50724tf9agmsni7hqf8130b7m12fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTUY09bt4keo_Uc6H3c6A_1i7t7qI-Dvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179423395003-q0b50724tf9agmsni7hqf8130b7m12fb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "179423395003-707ge269muk4lpji8k98fqk7quqe560t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.adminPanel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

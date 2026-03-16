@@ -1,0 +1,181 @@
+/* General Reset */
+ {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  background: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #2ecc71;
+  color: white;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.sidebar nav ul li a.active,
+.sidebar nav ul li a:hover {
+  background: #27ae60;
+}
+
+.sidebar nav ul li a i {
+  font-size: 1.2rem;
+}
+
+/* Main Container for Content and Footer */
+.container {
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: #f9f9f9;
+  overflow: auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #27ae60;
+  margin-bottom: 1rem;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #219150;
+}
+
+/* Table Styling */
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.appointments-table th {
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+}
+
+.appointments-table td {
+  background-color: white;
+}
+
+.appointments-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action buttons in table cells */
+.appointment-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.appointment-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.appointment-actions .accept-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.appointment-actions .edit-btn {
+  background: #3498db;
+  color: white;
+}
+
+.appointment-actions .cancel-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.appointment-actions .complete-btn {
+  background: #8e44ad;
+  color: white;
+}
+
+.appointment-actions button:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2ecc71;
+  color: white;
+  margin-top: auto;
+}

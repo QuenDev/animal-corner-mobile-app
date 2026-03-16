@@ -1,0 +1,70 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow authenticated users access
+    match /{document=**} {
+      allow read, write: if true;
+    }
+
+    // Users collection rules
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      // User appointments
+      match /appointments/{appointmentId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      // User pets
+      match /pets/{petId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    match /users/{userId}/appointments/{appointmentId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Admin rules for appointments (for the web admin panel)
+    match /appointments/{appointmentId} {
+      // Allow admins to read/write all appointments
+      allow read, write: if request.auth.token.admin == true;
+
+      // Allow users to read/write their own appointments
+      allow read, write: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+
+    // Admin-specific rules for web admin panel
+    match /users/{userId} {
+      // Allow admins to read all user data in the admin panel
+      allow read: if request.auth.token.admin == true;
+
+      // Prevent admins from modifying user data directly
+      allow write: if false;
+    }
+
+    match /users/{userId}/appointments/{appointmentId} {
+      // Allow admins to read appointments for any user
+      allow read: if request.auth.token.admin == true;
+
+      // Prevent admins from modifying appointments directly
+      allow write: if false;
+    }
+
+    match /users/{userId}/pets/{petId} {
+      // Allow admins to read pets for any user
+      allow read: if request.auth.token.admin == true;q
+
+      // Prevent admins from modifying pets directly
+      allow write: if false;
+    }
+
+    // Catch-all rule to deny access to any document not explicitly matched above
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+
+
+

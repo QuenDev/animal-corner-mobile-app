@@ -1,0 +1,2 @@
+C:/Users/quene/flutter_project/flutter_application_2/android/app/.cxx/RelWithDebInfo/3g4j593c/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/quene/flutter_project/flutter_application_2/android/app/.cxx/RelWithDebInfo/3g4j593c/x86_64/CMakeFiles/rebuild_cache.dir
